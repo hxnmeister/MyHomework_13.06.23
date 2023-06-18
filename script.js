@@ -43,3 +43,87 @@ alert(calculateSum([2,4,6]));*/
 const binary = [1,0,0,1];
 alert(calculateNumber(binary));*/
 //--------------------------------------------------------
+
+//Частина друга
+//Завдання №1
+/*function stringStatistic(value)
+{
+    let statistic = [0,0,0];
+
+    for (const item of value) 
+    {
+        if((item >= "a" && item <= "z") || (item >= "A" && item <= "Z"))
+        {
+            ++statistic[0];
+        }
+        else if((item > "0" && item < "9"))
+        {
+            ++statistic[1];
+        }
+        else
+        {
+            ++statistic[2];
+        }
+    }
+
+    return `Літер: ${statistic[0]}\nЦифр: ${statistic[1]}\nСпец. символи: ${statistic[2]}`;
+}
+
+console.log(stringStatistic("He11oz@%"));*/
+
+//Завдання №2
+/*function toCamelCase(value)
+{
+    while(value.includes("-"))
+    {
+        const index = value.indexOf("-");
+        
+        value = value.replace(value[index] + value[index + 1], value[index + 1].toUpperCase());
+    }
+
+    return value;
+}
+
+const str = "font-size-aaaa";
+
+alert(toCamelCase(str));*/
+
+//Завдання №3
+/*const creatingAbbreviation = (value) => value.split(/\ |\-/).map(x => x[0].toUpperCase()).join("");
+
+const str = "об’єктно-орієнтоване програмування";
+
+alert(creatingAbbreviation(str));*/
+
+//Завдання №4
+/*const rowSeparation = (str, separator) => str.split(separator); 
+
+const temp = "10/08/2020";
+
+alert(rowSeparation(temp,"/"));*/
+
+//Завдання №5
+/*function getInfoAboutSite(siteValue)
+{
+    let infoAboutSite = [];
+    const temp = siteValue.split("/");
+
+    if(siteValue.includes("https://") || siteValue.includes("http://"))
+    {
+        infoAboutSite.push(temp[0]);
+        infoAboutSite.push(temp[2]);
+        infoAboutSite.push(siteValue.substring(infoAboutSite[0].length + infoAboutSite[1].length + 2));
+    }
+    else
+    {
+        infoAboutSite.push("Інформація про протокол відсутня!");
+        infoAboutSite.push(temp[0]);
+        infoAboutSite.push(siteValue.substring(infoAboutSite[1].length));
+    }
+
+    return `Протокол: ${infoAboutSite[0]}\nДомен: ${infoAboutSite[1]}\nШлях: ${infoAboutSite[2]}`;
+}
+const userUrl = "https://itstep.org/ua/about";
+
+console.log(getInfoAboutSite(userUrl));*/
+
